@@ -1,0 +1,17 @@
+#Buidler files
+cache
+artifacts
+build
+todo
+migrations
+
+.env
+
+node_modules
+secret.json
+
+#solidity-coverage files
+coverage
+coverage.json
+
+deployments
