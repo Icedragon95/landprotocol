@@ -14,19 +14,15 @@ interface ILandNFT {
     function approve(address _to, uint256 _tokenId) external;
     function transfer(address _to, uint256 _tokenId) external;
     function transferFrom(address _from, address _to, uint256 _tokenId) external;
-    function createLand(
-        uint256 _size,
-        uint256 _tileId,
-        uint256 _value,
-        address _owner,
-        string calldata _url,
-        string calldata _element,
-        string calldata _name
-    ) external;
     
-    function getLand(uint256 _id) external view returns (
+    function getLandInfo(uint256 _id) external view returns (
+        uint256 value,
         uint256 creationTime,
+        uint256 tokenId,
         uint256 tileId,
-        uint256 value
+        address owner,
+        string memory element,
+        string memory name,
+        string memory continent
     );
 }

@@ -47,8 +47,7 @@ interface IXLAND {
      */
     function approve(address spender, uint256 amount) external returns (bool);
 
-
-    function mint(address recipient, uint256 amount) external returns (bool);
+    function mint(address recepient, uint256 amount) external returns (bool);
 
     /**
      * @dev Moves `amount` tokens from `sender` to `recipient` using the
@@ -60,4 +59,6 @@ interface IXLAND {
      * Emits a {Transfer} event.
      */
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
+
+    function showMsgSender() external view returns (address sender);
 }

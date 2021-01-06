@@ -20,8 +20,14 @@ contract XLANDToken is ERC20("XLAND Token", "XLAND", 18, 0), Ownable {
         escrowAddress = _escrowAddress;
     }
 
-    function mint(address account, uint256 amount) public onlyEscrow {
-    	_mint(account, amount);
+    function mint(address recepient, uint256 amount) public returns (bool) {
+        require(msg.sender == escrowAddress, "XLAND: forbidden");
+        _mint(recepient, amount);
+        return true;
+    }
+
+    function showMsgSender() public view returns (address sender) {
+        return msg.sender;
     }
 
     modifier onlyEscrow() {

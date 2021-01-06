@@ -11,7 +11,7 @@ module.exports = {
     ropsten: {
       provider: () =>
         new HDWalletProvider(
-          process.env.NEVERLAND_DEPLOYER_KEY,
+          process.env.LAND_DEPLOYER_KEY,
           "https://ropsten.infura.io/v3/" + process.env.INFURA_PROJECT_ID
         ),
       network_id: '3',
@@ -20,7 +20,7 @@ module.exports = {
     kovan: {
       provider: () =>
         new HDWalletProvider(
-          process.env.NEVERLAND_DEPLOYER_KEY,
+          process.env.LAND_DEPLOYER_KEY,
           "https://kovan.infura.io/v3/"  + process.env.INFURA_PROJECT_ID
         ),
       network_id: '*',

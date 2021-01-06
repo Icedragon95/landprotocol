@@ -33,8 +33,8 @@ contract LandPresale is Ownable {
 
     // presale duration
     uint256 public start;
-    uint256 public duration = 5 days;
-    uint256 public grace = 12 days;
+    uint256 public duration = 7 days;
+    uint256 public grace = 14 days;
 
     // token max cap
     uint256 public cap = 100000000000000000000000; // 100,000 $LAND
